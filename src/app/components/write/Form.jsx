@@ -4,6 +4,7 @@ import React, { useState } from "react";
 export default function Form() {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
+  const [locationId, setLocationId] = useState();
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [partner, setPartner] = useState("");
@@ -12,6 +13,7 @@ export default function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(locationId);
     // 여기서 서버에 데이터를 업로드하거나 필요한 동작을 수행합니다.
   };
 
@@ -23,6 +25,7 @@ export default function Form() {
     setPartner("");
     setContent("");
   };
+
   return (
     <div>
       <div className="flex w-full items-center justify-center h-full flex-col mt-20">
@@ -58,7 +61,31 @@ export default function Form() {
               type="text"
               id="subtitle"
               value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              onChange={(e) => {
+                const typedLocation = e.target.value;
+                setLocation(typedLocation);
+                if (typedLocation === "서울") {
+                  setLocationId(1);
+                } else if (typedLocation === "경기도") {
+                  setLocationId(2);
+                } else if (typedLocation === "강원도") {
+                  setLocationId(3);
+                } else if (typedLocation === "충청북도") {
+                  setLocationId(4);
+                } else if (typedLocation === "충청남도") {
+                  setLocationId(5);
+                } else if (typedLocation === "경상북도") {
+                  setLocationId(6);
+                } else if (typedLocation === "경상남도") {
+                  setLocationId(7);
+                } else if (typedLocation === "전라북도") {
+                  setLocationId(8);
+                } else if (typedLocation === "전라남도") {
+                  setLocationId(9);
+                } else {
+                  setLocationId(10);
+                }
+              }}
               className="w-4/5 mt-1 p-2 border rounded focus:outline-none focus:border-blue-500"
               maxLength="20"
               placeholder="다녀온 여행지를 적어주세요!"
