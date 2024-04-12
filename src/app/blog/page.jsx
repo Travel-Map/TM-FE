@@ -1,6 +1,6 @@
 import Header from "@/app/components/header/Header";
 import BlogList from "@/app/components/blog/BlogList";
-
+import WriteButton from "@/app/components/blog/WriteButton";
 export default function Blog() {
   const blogs = [
     {
@@ -44,8 +44,11 @@ export default function Blog() {
   return (
     <div className="w-auto">
       <Header />
-      <div className="w-auto mx-20 mt-20">
+      <div className="w-auto mx-20 mt-20 relative">
         <BlogList blogs={blogs} />
+        <div className="absolute bottom-0 right-0">
+          <WriteButton />
+        </div>
       </div>
     </div>
   );
