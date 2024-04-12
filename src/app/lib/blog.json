@@ -1,0 +1,50 @@
+{
+  "data": {
+    "blogs": [
+      {
+        "id": 1,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      },
+
+      {
+        "id": 3,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      },
+
+      {
+        "id": 4,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      },
+      {
+        "id": 5,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      },
+      {
+        "id": 6,
+        "title": "제주도가 너무 좋은 사람이 쓴 글",
+        "createdAt": "2024-04-15",
+        "likedCount": 1,
+        "imageUrl": "/public/blog/test1.jpeg"
+      }
+    ]
+  }
+}

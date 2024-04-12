@@ -6,7 +6,7 @@ export default function WriteButton() {
       <Pencil
         width="20"
         height="20"
-        className="w-16 h-16 bg-blue-500 rounded-full shadow-md hover:bg-blue-700"
+        className="w-20 h-20 bg-blue-500 rounded-full shadow-md hover:bg-blue-700"
       />
     </Link>
   );
