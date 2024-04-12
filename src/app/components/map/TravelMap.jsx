@@ -15,6 +15,8 @@ export default function TravelMap() {
     errMsg: null,
     isLoading: true,
   });
+  const [seoulMarker, setSeoulMarker] = useState(null);
+  const [gyeonggiMarker, setGyeonggiMarker] = useState(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -46,6 +48,26 @@ export default function TravelMap() {
     }
   }, []);
 
+  useEffect(() => {
+    if (!state.isLoading) {
+      const seoulMarkerPosition = {
+        lat: 37.518,
+        lng: 126.9734,
+      };
+      setSeoulMarker(seoulMarkerPosition);
+    }
+  }, [state.isLoading]);
+
+  useEffect(() => {
+    if (!state.isLoading) {
+      const gyeonggiMarkerPosition = {
+        lat: 37.3605,
+        lng: 126.9469,
+      };
+      setGyeonggiMarker(gyeonggiMarkerPosition);
+    }
+  }, [state.isLoading]);
+
   return (
     <>
       <Script
@@ -56,10 +78,13 @@ export default function TravelMap() {
 
       {!state.isLoading ? (
         <div style={{ width: "100%", height: "500px" }}>
-          {" "}
           {/* Ensure the container has a size */}
           <Map center={state.center} style={{ width: "100%", height: "100%" }}>
             <MapMarker position={state.center}></MapMarker>
+            {seoulMarker && <MapMarker position={seoulMarker}></MapMarker>}
+            {gyeonggiMarker && (
+              <MapMarker position={gyeonggiMarker}></MapMarker>
+            )}
           </Map>
         </div>
       ) : (
